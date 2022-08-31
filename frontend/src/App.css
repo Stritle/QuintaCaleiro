@@ -1,6 +1,17 @@
 @charset "UTF-8";
-h1, h2, h3, h4, h5, h6, p, a {
-  font-family: 'Playball', cursive;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  font-family: "Playball", cursive;
+}
+
+.rating {
+  color: #703535;
 }
 
 hr {
@@ -41,7 +52,7 @@ section {
 
 .video-intro div {
   position: absolute;
-  top: 35%;
+  top: 75%;
   left: 0;
   min-width: 100%;
   display: -webkit-box;
@@ -51,7 +62,7 @@ section {
 }
 
 .video-intro div img {
-  height: 210px;
+  height: 200px;
   margin: auto;
 }
 
@@ -250,6 +261,10 @@ section {
   font-size: 2.2rem;
 }
 
+.intro h3 {
+  text-align: center;
+}
+
 .intro p {
   text-align: center;
   margin: 2% 25% 0 25%;
@@ -300,23 +315,28 @@ section {
     z-index: 2;
   }
   .intro h1 {
-    text-align: center;
     margin: 10% 10% 0 10%;
-    color: #7e1a1a;
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
   .intro p {
     text-align: center;
-    margin: 10% 5% 15% 5%;
-    font-size: 1.0rem;
+    margin: 10% 5% 10% 5%;
+    font-size: 1.5rem;
   }
   .intro div {
-    margin-top: 10%;
+    margin-top: 6rem;
     width: 100%;
     text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .intro a {
-    margin: 0 1%;
+    margin: 1rem;
     font-family: Playfair;
     font-size: 0.8rem;
     text-decoration: none;
@@ -570,9 +590,14 @@ section {
 .vinhos h1 {
   font-size: 2.8rem;
   text-align: center;
-  margin: 9% 0 3% 0;
+  margin: 9% 0 0 0;
   color: #7e1a1a;
   font-weight: 100;
+}
+
+.vinhos h3 {
+  text-align: center;
+  margin: 0 0 3rem 0;
 }
 
 .vinhos .garrafa {
@@ -790,6 +815,19 @@ section {
   color: #7e1a1a;
 }
 
+.login a {
+  text-decoration: none;
+  color: #531919;
+  font-size: 1.3rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.login a:hover {
+  color: #bd3f3f;
+  font-size: 1.4rem;
+}
+
 .register {
   height: 100vh;
   width: 100%;
@@ -839,6 +877,19 @@ section {
 .register li button:hover {
   background-color: transparent;
   color: #7e1a1a;
+}
+
+.register li a {
+  text-decoration: none;
+  color: #531919;
+  font-size: 1.3rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.register li a:hover {
+  color: #bd3f3f;
+  font-size: 1.4rem;
 }
 
 .cart {
@@ -1003,6 +1054,10 @@ section {
   float: left;
 }
 
+.details .details-container .details-description strong {
+  margin-right: 5px;
+}
+
 .details .details-container .details-description p {
   margin-top: 20px;
   font-size: 1.2rem;
@@ -1010,7 +1065,7 @@ section {
 
 .details .details-container .details-description h1 {
   font-weight: 100;
-  margin-top: 10vh;
+  margin-top: 2vh;
   color: #531919;
 }
 
@@ -1057,6 +1112,7 @@ section {
 }
 
 .details .details-container .details-buttons .details-rating {
+  margin-top: 3rem;
   float: right;
   width: 25vw;
   height: 7vh;
@@ -1065,13 +1121,12 @@ section {
   display: flex;
 }
 
-.details .details-container .details-buttons .details-rating p {
+.details .details-container .details-buttons .details-rating strong {
   text-align: right;
   margin-right: 5px;
-}
-
-.details .details-container .details-buttons .details-rating h3 {
-  text-align: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .footer {
@@ -1234,6 +1289,7 @@ section {
 }
 
 .footer {
+  margin-top: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1273,7 +1329,7 @@ section {
 }
 
 .footer-center img {
-  width: 50%;
+  width: 25%;
   height: auto;
   margin: 0 auto;
 }
@@ -1304,10 +1360,10 @@ section {
   display: inline-block;
   text-decoration: none;
   color: black;
-  font-size: 2.8rem;
+  font-size: 1.2rem;
   margin: 0 auto;
-  -webkit-transition: .8s;
-  transition: .8s;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
   margin-top: 30px;
   margin-right: 30px;
 }
@@ -1387,8 +1443,8 @@ section {
     color: black;
     font-size: 2rem;
     margin: 0 auto;
-    -webkit-transition: .8s;
-    transition: .8s;
+    -webkit-transition: 0.8s;
+    transition: 0.8s;
     margin: 0 15px;
     margin-top: 10px;
   }

@@ -1,54 +1,50 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import logoNavbar from '../images/logoNavbar.png'
-import { useSelector, useDispatch } from 'react-redux'
-import { logout } from '../actions/userActions';
+import React from "react";
+import { Link } from "react-router-dom";
+import logoNavbar from "../images/logoCabrilNav.png";
+import { useSelector, useDispatch } from "react-redux";
+import { logout } from "../actions/userActions";
 
 const Navbar = (props) => {
+  // const state = {
+  //     isOpen: false
+  // };
+  // const handleToggle = () => {
 
-    // const state = {
-    //     isOpen: false
-    // };
-    // const handleToggle = () => {
+  //     this.setState({ isOpen: !this.state.isOpen })
+  // }
 
-    //     this.setState({ isOpen: !this.state.isOpen })
-    // }
+  const dispatch = useDispatch();
 
-    const dispatch = useDispatch();
+  const userSignin = useSelector((state) => state.userSignin);
+  const { userInfo } = userSignin;
 
+  const handleLogout = () => {
+    dispatch(logout());
+    props.history.push("/signin");
+  };
 
-    const userSignin = useSelector(state => state.userSignin)
-    const { userInfo } = userSignin;
-
-    const handleLogout = () => {
-        dispatch(logout());
-        props.history.push("/signin");
-    }
-
-
-    return (<>
-        <div className="navbar">
-
-            <Link to="/"><img src={logoNavbar}></img></Link>
-            <div className="navigation">
-                <Link to="/vinho"> Vinhos</Link>
-                <Link to="/quinta">Quinta</Link>
-                <Link to="/historia">História</Link>
-
-
-            </div>
-
-            <div className="user">
-                <Link to="/signin">{!userInfo && <p>Entrar</p>}</Link>
-                <Link to="/register">{!userInfo && <p>Registar</p>}</Link>
-                <Link>{userInfo && <p>{userInfo.name}</p>}</Link>
-                <Link to="/" onClick={handleLogout}>{userInfo && <p>Sair</p>}</Link>
-
-            </div>
-
-
+  return (
+    <>
+      <div className="navbar">
+        <Link to="/">
+          <img src={logoNavbar}></img>
+        </Link>
+        <div className="navigation">
+          <Link to="/vinho"> Vinhos</Link>
+          <Link to="/quinta">Quinta</Link>
+          <Link to="/historia">História</Link>
         </div>
-        {/* <div className="mobile">
+
+        <div className="user">
+          <Link to="/signin">{!userInfo && <p>Entrar</p>}</Link>
+          <Link to="/register">{!userInfo && <p>Registar</p>}</Link>
+          <Link>{userInfo && <p>{userInfo.name}</p>}</Link>
+          <Link to="/" onClick={handleLogout}>
+            {userInfo && <p>Sair</p>}
+          </Link>
+        </div>
+      </div>
+      {/* <div className="mobile">
             <div className="nav-mobile">
                 <button type="button" className="nav-btn">
                     <FaAlignRight className="nav-icon" onClick={handleToggle} />
@@ -81,6 +77,6 @@ const Navbar = (props) => {
 
         </div> */}
     </>
-    )
-}
-export default Navbar
+  );
+};
+export default Navbar;
