@@ -2,10 +2,14 @@ import React from "react";
 import Navbar from "../componentes/Navbar";
 import SmallFooter from "../componentes/SmallFooter";
 import exQ from "../images/exQ.jpg";
+import { Helmet } from "react-helmet-async";
 
 const Historia = (props) => {
   return (
     <div className="historia">
+      <Helmet>
+        <title>História - Quinta do Cabril</title>
+      </Helmet>
       <Navbar />
       <h1>A nossa historia</h1>
 

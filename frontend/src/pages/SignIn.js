@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { signin } from "../actions/userActions";
 import Navbar from "../componentes/Navbar";
 import SmallFooter from "../componentes/SmallFooter";
+import { Helmet } from "react-helmet-async";
 
 const SignIn = (props) => {
   const [email, setEmail] = useState("");
@@ -29,6 +30,9 @@ const SignIn = (props) => {
   return (
     <div className="login">
       <Navbar />
+      <Helmet>
+        <title>Entrar - Quinta do Cabril</title>
+      </Helmet>
       <form onSubmit={submitHandler}>
         <h1>Login</h1>
         <ul>

@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { listVinhos } from "../actions/vinhoActions";
 import { useDispatch, useSelector } from "react-redux";
 import SmallFooter from "../componentes/SmallFooter";
+import { Helmet } from "react-helmet-async";
 
 function VinhosPage(props) {
   const vinhoList = useSelector((state) => state.vinhoList);
@@ -23,6 +24,9 @@ function VinhosPage(props) {
   ) : (
     <div className="loja">
       <Navbar />
+      <Helmet>
+        <title>Vinhos - Quinta do Cabril</title>
+      </Helmet>
       <h1>Os Vinhos Quinta do Caleiro</h1>
       <div className="content-loja">
         <ul className="vinho-ul">
