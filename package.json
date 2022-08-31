@@ -1,0 +1,26 @@
+{
+  "name": "quintacaleiro",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000q\u0000u\u0000i\u0000n\u0000t\u0000a\u0000C\u0000a\u0000l\u0000e\u0000i\u0000r\u0000o\u0000\r\u0000 \u0000#\u0000 \u0000q\u0000u\u0000i\u0000n\u0000t\u0000a\u0000C\u0000a\u0000l\u0000e\u0000i\u0000r\u0000o\u0000\r\u0000 \u0000",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --watch backend --exec babel-node backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Stritle/quintaCaleiro.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Stritle/quintaCaleiro/issues"
+  },
+  "homepage": "https://github.com/Stritle/quintaCaleiro#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.11.6",
+    "@babel/core": "^7.11.6",
+    "@babel/node": "^7.10.5",
+    "@babel/preset-env": "^7.11.5",
+    "nodemon": "^2.0.4"
+  }
+}

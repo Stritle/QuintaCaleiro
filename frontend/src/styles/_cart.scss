@@ -1,0 +1,112 @@
+.cart{
+    float: left;
+    min-height: 100vh;
+    width: 99.9vw;
+    h3{
+        margin: 18vh 0 1vh 15vw;
+        font-size: 1.9rem;
+    }
+    .cart-list{
+        min-height: 24vh;
+        width: 70%;
+        margin: 0 auto;
+        border: 1px solid slategrey;
+        .cast-list-container{
+            height: 100%;
+            width: 100%;
+            .cabeçalho{
+                height: 4vh;
+                width: 100%;
+                display: flex;
+                background-color: rgb(197, 197, 197);
+                .label-produtos{
+                    width: 60%;
+                    small{
+                        margin-left: 10%;
+                        
+                    }
+                }      
+                .label-price{
+                    width: 10%;
+                    text-align: center;
+                }        
+                .label-qty{
+                    width: 10%;
+                    text-align: center;
+                }        
+                .label-price-total{
+                    width: 10%;
+                    text-align: center;
+                }           
+                .label-remove{
+                    width: 10%;
+                    text-align: center;
+                }                      
+            }
+            li{
+                height: 12vh;
+                width: 100%;
+                border:1px solid rgb(0, 0, 0);
+                list-style: none;
+                .cart-item{
+                    height: 100%;
+                width: 100%;
+                 display: flex;
+                
+                    .cart-image{
+                        width: 10%;
+                        height: 100%;
+                        img{
+                            height: 100%;
+                        }
+                    
+                    
+                }
+                .cart-name{
+
+                    width: 50%;
+                    p{
+                        margin-top: 40px;
+                        
+                    }
+                }
+                .cart-price{
+                    width: 10%;
+                    p{
+                        margin-top: 40px;
+                        text-align: center;
+                    }
+                }
+                .cart-qty{
+                    width: 10%;
+                    p{
+                        margin-top: 40px;
+                        text-align: center;
+                    }
+                }
+                .cart-price-total{
+                    width: 10%;
+                    p{
+                        margin-top: 40px;
+                        text-align: center;
+                    }
+                }
+                .cart-remover{
+                    width: 10%;
+                    button{
+                        margin-top: 40px;
+                        margin-left: 35px;
+                    }
+                }
+                }
+            }
+            .cabeçalho-final{
+                height: 4vh;
+                width: 100%;
+                display: flex;
+                background-color: rgb(197, 197, 197);
+
+            }
+        }
+    }
+}
