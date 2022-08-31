@@ -53,16 +53,17 @@ $corApontamentoHover: #bd3f3f;
       border-radius: 3px;
       transition: 0.7s;
       z-index: 2;
+      &:hover {
+        border: 1px transparent;
+        padding: 10px 5px;
+        color: $corApontamentoHover;
+        margin: 0 5px;
+      }
       &:nth-child(1) {
         padding: 6px;
       }
       &:nth-child(2) {
         padding: 6px;
-      }
-      &:hover {
-        border: 1px transparent;
-        padding: 10px 5px;
-        color: $corApontamentoHover;
       }
     }
   }

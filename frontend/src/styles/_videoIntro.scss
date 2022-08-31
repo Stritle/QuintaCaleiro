@@ -19,13 +19,15 @@ $corApontamentoHover: #7e1a1a;
   }
   div {
     position: absolute;
-    top: 75%;
+    top: 85%;
     left: 0;
     min-width: 100%;
     display: flex;
     z-index: 2;
     img {
-      height: 200px;
+      background-color: #632626c8;
+      border-radius: 100%;
+      height: 100px;
       margin: auto;
     }
   }

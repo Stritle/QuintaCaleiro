@@ -1,17 +1,39 @@
-.historia{
-    min-height: 100vh;
-    width: 100%;
-    h1{ margin:10% 0 -3% 0;
-        text-align: center;
-        font-weight: 100;
-        font-size: 2.2rem;
-        color: $corApontamentoHover;
-
-        
+.historia {
+  height: auto;
+  width: 100%;
+  float: left;
+  .navbar p {
+    text-decoration: none;
+    margin-right: 20px;
+    font-family: "Playball", cursive;
+    font-size: 0.8rem;
+    font-weight: 100;
+    color: whitesmoke;
+    background-color: #531918;
+    border-radius: 3px;
+    transition: 0.7s;
+    z-index: 2;
+    &:hover {
+      border: 1px transparent;
+      color: $corApontamentoHover;
+      margin: 0 5px;
     }
-    p{
-        text-align: center;
-        margin:5% 10%;
-        font-size: 1.2rem;
+  }
+  h1 {
+    margin: 10% 0 -3% 0;
+    text-align: center;
+    font-weight: 100;
+    font-size: 2.2rem;
+    color: $corApontamentoHover;
+  }
+  p {
+    text-align: center;
+    margin: 5% 10%;
+    font-size: 1.2rem;
+  }
+  .smallFooter {
+    p {
+      margin: 0;
     }
+  }
 }

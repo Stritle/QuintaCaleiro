@@ -52,7 +52,7 @@ section {
 
 .video-intro div {
   position: absolute;
-  top: 75%;
+  top: 85%;
   left: 0;
   min-width: 100%;
   display: -webkit-box;
@@ -62,7 +62,9 @@ section {
 }
 
 .video-intro div img {
-  height: 200px;
+  background-color: #632626c8;
+  border-radius: 100%;
+  height: 100px;
   margin: auto;
 }
 
@@ -168,18 +170,19 @@ section {
   z-index: 2;
 }
 
+.navbar .user a:hover {
+  border: 1px transparent;
+  padding: 10px 5px;
+  color: #bd3f3f;
+  margin: 0 5px;
+}
+
 .navbar .user a:nth-child(1) {
   padding: 6px;
 }
 
 .navbar .user a:nth-child(2) {
   padding: 6px;
-}
-
-.navbar .user a:hover {
-  border: 1px transparent;
-  padding: 10px 5px;
-  color: #bd3f3f;
 }
 
 .navbar a img {
@@ -549,8 +552,28 @@ section {
 }
 
 .quinta {
-  min-height: 100vh;
+  height: auto;
   width: 100%;
+}
+
+.quinta .navbar p {
+  text-decoration: none;
+  margin-right: 20px;
+  font-family: "Playball", cursive;
+  font-size: 0.8rem;
+  font-weight: 100;
+  color: whitesmoke;
+  background-color: #531918;
+  border-radius: 3px;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+  z-index: 2;
+}
+
+.quinta .navbar p:hover {
+  border: 1px transparent;
+  color: #7e1a1a;
+  margin: 0 5px;
 }
 
 .quinta h1 {
@@ -567,9 +590,34 @@ section {
   font-size: 1.2rem;
 }
 
+.quinta .smallFooter p {
+  margin: 0;
+}
+
 .historia {
-  min-height: 100vh;
+  height: auto;
   width: 100%;
+  float: left;
+}
+
+.historia .navbar p {
+  text-decoration: none;
+  margin-right: 20px;
+  font-family: "Playball", cursive;
+  font-size: 0.8rem;
+  font-weight: 100;
+  color: whitesmoke;
+  background-color: #531918;
+  border-radius: 3px;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+  z-index: 2;
+}
+
+.historia .navbar p:hover {
+  border: 1px transparent;
+  color: #7e1a1a;
+  margin: 0 5px;
 }
 
 .historia h1 {
@@ -584,6 +632,10 @@ section {
   text-align: center;
   margin: 5% 10%;
   font-size: 1.2rem;
+}
+
+.historia .smallFooter p {
+  margin: 0;
 }
 
 .vinhos {
@@ -623,12 +675,19 @@ section {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.vinhos .garrafa img:hover {
+  margin-top: -30px;
+  width: 65%;
 }
 
 .vinhos .garrafa p {
-  font-family: Playfair;
+  font-family: "Playfair Display", serif;
   text-align: center;
-  font-size: 0.8rem;
+  font-size: 1.2rem;
   margin-top: 20px;
   margin-bottom: 30px;
 }
@@ -838,6 +897,12 @@ section {
   font-size: 1.4rem;
 }
 
+.login .smallFooter {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 90vh;
+}
+
 .register {
   height: 100vh;
   width: 100%;
@@ -900,6 +965,12 @@ section {
 .register li a:hover {
   color: #bd3f3f;
   font-size: 1.4rem;
+}
+
+.register .smallFooter {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 90vh;
 }
 
 .cart {
@@ -1066,11 +1137,13 @@ section {
 
 .details .details-container .details-description strong {
   margin-right: 5px;
+  font-family: "Playball", cursive;
 }
 
 .details .details-container .details-description p {
   margin-top: 20px;
   font-size: 1.2rem;
+  font-family: "Playfair Display", serif;
 }
 
 .details .details-container .details-description h1 {
@@ -1184,30 +1257,33 @@ section {
   border: 1px solid #e5e6e3;
   -webkit-box-shadow: 3px 3px 10px #531919;
           box-shadow: 3px 3px 10px #531919;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.loja .content-loja .vinho-ul li:hover {
+  margin: 2px 0 1px 0;
 }
 
 .loja .content-loja .vinho-ul li .vinho-item {
   position: relative;
-  height: 100%;
   width: 100%;
 }
 
 .loja .content-loja .vinho-ul li .vinho-item .vinhos-img {
+  text-align: center;
   margin: 0 auto;
-  width: 50%;
-  height: 70%;
 }
 
 .loja .content-loja .vinho-ul li .vinho-item .vinhos-img img {
-  height: 87%;
-  width: 100%;
-  margin: 0 auto;
+  width: 80%;
+  margin-bottom: 2rem;
 }
 
 .loja .content-loja .vinho-ul li .vinho-item .vinhos-img p {
   margin: 10px 32% 0 32%;
   text-align: center;
-  color: whitesmoke;
+  color: saddlebrown;
   background-color: #531919;
   border-radius: 0;
 }
@@ -1269,8 +1345,10 @@ section {
 }
 
 .loja .content-loja .vinho-ul li .vinho-item .vinhos-texto h3 {
+  margin-top: 1rem;
+  font-family: "Playfair Display", serif;
   text-align: center;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: #531919;
   font-weight: 100;
 }
@@ -1280,8 +1358,29 @@ section {
 }
 
 .historia {
-  min-height: 100vh;
+  height: auto;
   width: 100%;
+  float: left;
+}
+
+.historia .navbar p {
+  text-decoration: none;
+  margin-right: 20px;
+  font-family: "Playball", cursive;
+  font-size: 0.8rem;
+  font-weight: 100;
+  color: whitesmoke;
+  background-color: #531918;
+  border-radius: 3px;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+  z-index: 2;
+}
+
+.historia .navbar p:hover {
+  border: 1px transparent;
+  color: #7e1a1a;
+  margin: 0 5px;
 }
 
 .historia h1 {
@@ -1298,6 +1397,10 @@ section {
   font-size: 1.2rem;
 }
 
+.historia .smallFooter p {
+  margin: 0;
+}
+
 .footer {
   margin-top: 1rem;
   display: -webkit-box;
@@ -1312,7 +1415,7 @@ section {
 .footer-left {
   width: 25%;
   height: 100%;
-  margin-top: 10px;
+  margin-top: 30px;
 }
 
 .footer-left h3 {
@@ -1352,7 +1455,7 @@ section {
 }
 
 .footer-right {
-  margin-top: 20px;
+  margin-top: 30px;
   float: left;
   width: 25%;
   height: 100%;

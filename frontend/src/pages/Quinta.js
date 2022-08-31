@@ -1,5 +1,4 @@
 import React from "react";
-import Footer from "../componentes/Footer";
 import Navbar from "../componentes/Navbar";
 import SmallFooter from "../componentes/SmallFooter";
 import exQ from "../images/exQ.jpg";
@@ -8,8 +7,7 @@ const Quinta = () => {
   return (
     <div className="quinta">
       <Navbar />
-
-      <h1> A Quinta do Caleiro</h1>
+      <h1> A Quinta do Cabril</h1>
       <p>
         Situada na margem direita do rio Douro, entre a Régua e o Pinhão, a
         Quinta do Crasto é uma propriedade com 135 hectares de área total, 74
@@ -51,7 +49,7 @@ const Quinta = () => {
       <img src={exQ} alt=""></img>
       <p>
         {" "}
-        A Quinta do Crasto tem inúmeras parcelas de Vinhas Velhas neste terroir
+        A Quinta do Cabril tem inúmeras parcelas de Vinhas Velhas neste terroir
         de eleição, como a Vinha Maria Teresa, a Vinha dos Cardanhos de Cima ou
         a Vinha da Ponte, referindo apenas algumas das mais significativas entre
         dezenas de outras pequenas parcelas, num total de 40 hectares de área de

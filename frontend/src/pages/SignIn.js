@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { signin } from "../actions/userActions";
 import Navbar from "../componentes/Navbar";
+import SmallFooter from "../componentes/SmallFooter";
 
 const SignIn = (props) => {
   const [email, setEmail] = useState("");
@@ -64,6 +65,7 @@ const SignIn = (props) => {
           </li>
         </ul>
       </form>
+      <SmallFooter />
     </div>
   );
 };

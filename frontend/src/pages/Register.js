@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { register } from "../actions/userActions";
 import Navbar from "../componentes/Navbar";
+import SmallFooter from "../componentes/SmallFooter";
 
 const Register = (props) => {
   const [name, setName] = useState("");
@@ -86,6 +87,7 @@ const Register = (props) => {
           </li>
         </ul>
       </form>
+      <SmallFooter />
     </div>
   );
 };
