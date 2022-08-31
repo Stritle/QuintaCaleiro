@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../componentes/Navbar";
-import Footer from "../componentes/Footer";
 import { detailsVinhos } from "../actions/vinhoActions";
 import { useDispatch, useSelector } from "react-redux";
 import { CgShoppingCart } from "react-icons/cg";
 import Rating from "../componentes/Rating";
+import SmallFooter from "../componentes/SmallFooter";
 
 const DetailsVinho = (props) => {
   const [qty, setQty] = useState(1);
@@ -36,7 +36,7 @@ const DetailsVinho = (props) => {
           <Navbar />
           <div className="details-container">
             <div className="details-image">
-              <img src={vinho.image}></img>
+              <img src={vinho.image} alt={vinho.nome}></img>
             </div>
             <div className="details-description">
               <h1>{vinho.nome}</h1>
@@ -124,7 +124,7 @@ const DetailsVinho = (props) => {
               </div>
             </div>
           </div>
-          <Footer />
+          <SmallFooter />
         </div>
       )}
     </div>

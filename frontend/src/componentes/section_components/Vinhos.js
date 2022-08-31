@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import v1 from "../../images/v1.png";
-import v2 from "../../images/v2.jpg";
-import v3 from "../../images/v3.jpg";
-import v4 from "../../images/v4.jpg";
+
 import { Link } from "react-router-dom";
 
 export default class Vinhos extends Component {

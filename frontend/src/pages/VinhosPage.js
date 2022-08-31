@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import Navbar from "../componentes/Navbar";
-import Footer from "../componentes/Footer";
 import { Link } from "react-router-dom";
 import { listVinhos } from "../actions/vinhoActions";
 import { useDispatch, useSelector } from "react-redux";
+import SmallFooter from "../componentes/SmallFooter";
 
 function VinhosPage(props) {
   const vinhoList = useSelector((state) => state.vinhoList);
@@ -45,6 +45,7 @@ function VinhosPage(props) {
           ))}
         </ul>
       </div>
+      <SmallFooter />
     </div>
   );
 }

@@ -27,7 +27,7 @@ const Navbar = (props) => {
     <>
       <div className="navbar">
         <Link to="/">
-          <img src={logoNavbar}></img>
+          <img src={logoNavbar} alt="Quinta do Cabril"></img>
         </Link>
         <div className="navigation">
           <Link to="/vinho"> Vinhos</Link>
