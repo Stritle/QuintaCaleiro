@@ -49,22 +49,13 @@ $corApontamentoHover: #bd3f3f;
       font-size: 0.9rem;
       font-weight: 100;
       color: whitesmoke;
-      background-color: #531918;
       border-radius: 3px;
       transition: 0.7s;
       z-index: 2;
-      &:hover {
-        border: 1px transparent;
-        padding: 10px 5px;
-        color: $corApontamentoHover;
-        margin: 0 5px;
-      }
-      &:nth-child(1) {
-        padding: 6px;
-      }
-      &:nth-child(2) {
-        padding: 6px;
-      }
+      color: black;
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin-right: 1.1rem;
     }
   }
   a {

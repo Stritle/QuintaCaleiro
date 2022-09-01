@@ -8,6 +8,7 @@ import bodyParser from "body-parser";
 import vinhoRoute from "./routes/vinhoRoute.js";
 
 dotenv.config();
+
 const mongodbUrl = config.MONGODB_URL;
 mongoose
   .connect(mongodbUrl, {
@@ -16,6 +17,10 @@ mongoose
     useCreateIndex: true,
   })
   .catch((error) => console.log(error.reason));
+
+if (mongodbUrl) {
+  console.log("connected");
+}
 
 const app = express();
 app.use(bodyParser.json());

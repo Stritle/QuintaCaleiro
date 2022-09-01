@@ -27,3 +27,29 @@
     }
   }
 }
+@media (max-width: 650px) {
+  .smallFooter {
+    div {
+      p {
+        font-size: 0.7rem;
+        color: aliceblue;
+        font-family: "Playfair Display", serif;
+
+        &:first-child {
+          margin-top: 0.4rem;
+        }
+      }
+
+      svg {
+        font-size: 1.1rem;
+        margin-right: 0.5rem;
+        padding-top: 2rem;
+        color: aliceblue;
+      }
+      img {
+        margin-top: 15px;
+        width: 20vw;
+      }
+    }
+  }
+}

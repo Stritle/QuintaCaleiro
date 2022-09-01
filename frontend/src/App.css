@@ -99,7 +99,9 @@ section {
     z-index: 1;
   }
   .imageIntro div img {
-    height: 110px;
+    height: 250px;
+    background-color: rgba(250, 235, 215, 0.341);
+    border-radius: 100%;
     margin: auto;
   }
 }
@@ -163,26 +165,14 @@ section {
   font-size: 0.9rem;
   font-weight: 100;
   color: whitesmoke;
-  background-color: #531918;
   border-radius: 3px;
   -webkit-transition: 0.7s;
   transition: 0.7s;
   z-index: 2;
-}
-
-.navbar .user a:hover {
-  border: 1px transparent;
-  padding: 10px 5px;
-  color: #bd3f3f;
-  margin: 0 5px;
-}
-
-.navbar .user a:nth-child(1) {
-  padding: 6px;
-}
-
-.navbar .user a:nth-child(2) {
-  padding: 6px;
+  color: black;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-right: 1.1rem;
 }
 
 .navbar a img {
@@ -329,15 +319,15 @@ section {
   }
   .intro h1 {
     margin: 10% 10% 0 10%;
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
   .intro p {
     text-align: center;
     margin: 10% 5% 10% 5%;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
   .intro div {
-    margin-top: 6rem;
+    margin-top: 3rem;
     width: 100%;
     text-align: center;
     display: -webkit-box;
@@ -474,6 +464,7 @@ section {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    margin-top: 1vh;
   }
   .fotos .fotos-ajuste .parent {
     -webkit-transform: scale(1);
@@ -485,7 +476,7 @@ section {
     overflow: hidden;
     margin: 5px;
     width: 48.5vw;
-    height: 40vh;
+    height: 47.5vh;
     font-size: 1.5rem;
   }
   .fotos .fotos-ajuste .parent:hover .child {
@@ -1510,7 +1501,7 @@ section {
     color: #7e1a1a;
     font-weight: 400;
     font-size: 1.5rem;
-    margin-top: 15%;
+    margin-top: 25%;
   }
   .footer-left p {
     text-align: center;
@@ -1528,15 +1519,9 @@ section {
     width: 40%;
     height: auto;
     margin: 0 auto;
-    margin-top: 30px;
   }
   .footer-center h6 {
-    position: absolute;
-    top: 90%;
-    left: 37%;
-    font-weight: 100;
-    font-family: Playfair;
-    color: black;
+    display: none;
   }
   .footer-right {
     float: left;
@@ -1552,7 +1537,7 @@ section {
   .footer-right div a {
     display: inline-block;
     text-decoration: none;
-    color: black;
+    color: #5a2624;
     font-size: 2rem;
     margin: 0 auto;
     -webkit-transition: 0.8s;
@@ -1564,7 +1549,7 @@ section {
     color: #7e1a1a;
   }
   .footer-right h3 {
-    margin-top: 8%;
+    margin-top: 0%;
     margin-right: 0;
     text-align: center;
     color: #7e1a1a;
@@ -1608,5 +1593,26 @@ section {
 .smallFooter div img {
   margin-top: 5px;
   width: 5vw;
+}
+
+@media (max-width: 650px) {
+  .smallFooter div p {
+    font-size: 0.7rem;
+    color: aliceblue;
+    font-family: "Playfair Display", serif;
+  }
+  .smallFooter div p:first-child {
+    margin-top: 0.4rem;
+  }
+  .smallFooter div svg {
+    font-size: 1.1rem;
+    margin-right: 0.5rem;
+    padding-top: 2rem;
+    color: aliceblue;
+  }
+  .smallFooter div img {
+    margin-top: 15px;
+    width: 20vw;
+  }
 }
 /*# sourceMappingURL=App.css.map */
