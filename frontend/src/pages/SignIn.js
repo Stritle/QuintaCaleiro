@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { signin } from "../actions/userActions";
-import Navbar from "../componentes/Navbar";
 import SmallFooter from "../componentes/SmallFooter";
 import { Helmet } from "react-helmet-async";
 
@@ -29,7 +28,6 @@ const SignIn = (props) => {
 
   return (
     <div className="login">
-      <Navbar />
       <Helmet>
         <title>Entrar - Quinta do Cabril</title>
       </Helmet>

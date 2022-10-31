@@ -160,19 +160,31 @@ section {
 
 .navbar .user a {
   text-decoration: none;
-  margin-right: 20px;
+}
+
+.navbar .user p {
+  text-decoration: none;
+  margin: 0 10px;
+  padding: 5px 10px;
   font-family: "Playball", cursive;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   font-weight: 100;
   color: whitesmoke;
+  background-color: #531918;
   border-radius: 3px;
   -webkit-transition: 0.7s;
   transition: 0.7s;
   z-index: 2;
-  color: black;
-  font-weight: 600;
-  font-size: 1.1rem;
-  margin-right: 1.1rem;
+}
+
+.navbar .user p:hover {
+  border: 1px transparent;
+  color: #bd3f3f;
+  margin: 0 0px;
+}
+
+.navbar .user a:last-child {
+  margin-right: 3rem;
 }
 
 .navbar a img {
@@ -547,26 +559,6 @@ section {
   width: 100%;
 }
 
-.quinta .navbar p {
-  text-decoration: none;
-  margin-right: 20px;
-  font-family: "Playball", cursive;
-  font-size: 0.8rem;
-  font-weight: 100;
-  color: whitesmoke;
-  background-color: #531918;
-  border-radius: 3px;
-  -webkit-transition: 0.7s;
-  transition: 0.7s;
-  z-index: 2;
-}
-
-.quinta .navbar p:hover {
-  border: 1px transparent;
-  color: #7e1a1a;
-  margin: 0 5px;
-}
-
 .quinta h1 {
   margin: 10% 0 -3% 0;
   text-align: center;
@@ -589,26 +581,6 @@ section {
   height: auto;
   width: 100%;
   float: left;
-}
-
-.historia .navbar p {
-  text-decoration: none;
-  margin-right: 20px;
-  font-family: "Playball", cursive;
-  font-size: 0.8rem;
-  font-weight: 100;
-  color: whitesmoke;
-  background-color: #531918;
-  border-radius: 3px;
-  -webkit-transition: 0.7s;
-  transition: 0.7s;
-  z-index: 2;
-}
-
-.historia .navbar p:hover {
-  border: 1px transparent;
-  color: #7e1a1a;
-  margin: 0 5px;
 }
 
 .historia h1 {
@@ -971,134 +943,155 @@ section {
 }
 
 .cart h3 {
-  margin: 18vh 0 1vh 15vw;
+  margin: 25vh 0 1vh 15vw;
   font-size: 1.9rem;
+  color: #531918;
 }
 
-.cart .cart-list {
-  min-height: 24vh;
+.cart .cart-container {
   width: 70%;
   margin: 0 auto;
-  border: 1px solid slategrey;
+  color: #fff;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
-.cart .cart-list .cast-list-container {
-  height: 100%;
-  width: 100%;
-}
-
-.cart .cart-list .cast-list-container .cabeçalho {
-  height: 4vh;
+.cart .cart-container .cart-content-label {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: #c5c5c5;
+  background-color: #531918;
 }
 
-.cart .cart-list .cast-list-container .cabeçalho .label-produtos {
-  width: 60%;
-}
-
-.cart .cart-list .cast-list-container .cabeçalho .label-produtos small {
-  margin-left: 10%;
-}
-
-.cart .cart-list .cast-list-container .cabeçalho .label-price {
-  width: 10%;
+.cart .cart-container .cart-content-label .label-produtos {
+  -webkit-box-flex: 6;
+      -ms-flex: 6;
+          flex: 6;
   text-align: center;
 }
 
-.cart .cart-list .cast-list-container .cabeçalho .label-qty {
-  width: 10%;
+.cart .cart-container .cart-content-label div {
   text-align: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
-.cart .cart-list .cast-list-container .cabeçalho .label-price-total {
-  width: 10%;
-  text-align: center;
+.cart .cart-container ul {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
-.cart .cart-list .cast-list-container .cabeçalho .label-remove {
-  width: 10%;
-  text-align: center;
-}
-
-.cart .cart-list .cast-list-container li {
+.cart .cart-container ul li {
   height: 12vh;
   width: 100%;
-  border: 1px solid black;
   list-style: none;
-}
-
-.cart .cart-list .cast-list-container li .cart-item {
-  height: 100%;
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  color: #000000;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  border: 1px solid black;
 }
 
-.cart .cart-list .cast-list-container li .cart-item .cart-image {
+.cart .cart-container ul li .cart-image {
+  height: 90%;
   width: 10%;
+  margin-top: 5px;
+}
+
+.cart .cart-container ul li .cart-image img {
   height: 100%;
 }
 
-.cart .cart-list .cast-list-container li .cart-item .cart-image img {
-  height: 100%;
-}
-
-.cart .cart-list .cast-list-container li .cart-item .cart-name {
+.cart .cart-container ul li .cart-name {
   width: 50%;
 }
 
-.cart .cart-list .cast-list-container li .cart-item .cart-name p {
+.cart .cart-container ul li .cart-name p {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   margin-top: 40px;
 }
 
-.cart .cart-list .cast-list-container li .cart-item .cart-price {
+.cart .cart-container ul li .cart-price {
   width: 10%;
 }
 
-.cart .cart-list .cast-list-container li .cart-item .cart-price p {
+.cart .cart-container ul li .cart-price p {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   margin-top: 40px;
   text-align: center;
 }
 
-.cart .cart-list .cast-list-container li .cart-item .cart-qty {
+.cart .cart-container ul li .cart-qty {
   width: 10%;
 }
 
-.cart .cart-list .cast-list-container li .cart-item .cart-qty p {
+.cart .cart-container ul li .cart-qty p {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   margin-top: 40px;
   text-align: center;
 }
 
-.cart .cart-list .cast-list-container li .cart-item .cart-price-total {
+.cart .cart-container ul li .cart-price-total {
   width: 10%;
 }
 
-.cart .cart-list .cast-list-container li .cart-item .cart-price-total p {
+.cart .cart-container ul li .cart-price-total p {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   margin-top: 40px;
   text-align: center;
 }
 
-.cart .cart-list .cast-list-container li .cart-item .cart-remover {
-  width: 10%;
+.cart .cart-container ul li .cart-remover svg {
+  font-size: 1.5rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
-.cart .cart-list .cast-list-container li .cart-item .cart-remover button {
-  margin-top: 40px;
-  margin-left: 35px;
+.cart .cart-container ul li .cart-remover svg:hover {
+  font-size: 1.8rem;
 }
 
-.cart .cart-list .cast-list-container .cabeçalho-final {
+.cart .cart-container ul li .cart-remover button {
+  margin-top: 38px;
+  margin-left: 38px;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.cart .cart-content-cabeçalho {
   height: 4vh;
   width: 100%;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: #c5c5c5;
+  background-color: #531918;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.cart .cart-content-cabeçalho button {
+  margin-right: 2vw;
+  background-color: #fff;
+  color: #531918;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 0 10px;
+}
+
+.cart .cart-content-cabeçalho p {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin-right: 2rem;
+  margin-top: 0.2rem;
 }
 
 .details {
@@ -1129,17 +1122,19 @@ section {
 .details .details-container .details-description strong {
   margin-right: 5px;
   font-family: "Playball", cursive;
+  font-size: 1.5rem;
 }
 
 .details .details-container .details-description p {
   margin-top: 20px;
-  font-size: 1.2rem;
-  font-family: "Playfair Display", serif;
+  font-size: 1.1rem;
+  font-weight: 100;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 .details .details-container .details-description h1 {
   font-weight: 100;
-  margin-top: 2vh;
+  margin-top: 1.8vh;
   color: #531919;
 }
 
@@ -1213,7 +1208,6 @@ section {
 
 .loja {
   width: 100%;
-  min-height: 100vh;
 }
 
 .loja h1 {
@@ -1241,10 +1235,10 @@ section {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 300px;
           flex: 1 1 300px;
-  height: 70vh;
+  height: 51vh;
   background-color: #eaebdf;
   border-radius: 1px;
-  margin: 20px 20px 70px 20px;
+  margin: 20px 35px 55px 35px;
   border: 1px solid #e5e6e3;
   -webkit-box-shadow: 3px 3px 10px #531919;
           box-shadow: 3px 3px 10px #531919;
@@ -1264,15 +1258,17 @@ section {
 .loja .content-loja .vinho-ul li .vinho-item .vinhos-img {
   text-align: center;
   margin: 0 auto;
+  margin-top: 1rem;
 }
 
 .loja .content-loja .vinho-ul li .vinho-item .vinhos-img img {
-  width: 80%;
-  margin-bottom: 2rem;
+  width: 60%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .loja .content-loja .vinho-ul li .vinho-item .vinhos-img p {
-  margin: 10px 32% 0 32%;
+  margin: 0 32% 0 32%;
   text-align: center;
   color: saddlebrown;
   background-color: #531919;
@@ -1336,12 +1332,13 @@ section {
 }
 
 .loja .content-loja .vinho-ul li .vinho-item .vinhos-texto h3 {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1.7rem;
   font-family: "Playfair Display", serif;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 0.8rem;
   color: #531919;
-  font-weight: 100;
+  font-weight: 600;
 }
 
 .loja .footer {
@@ -1352,26 +1349,6 @@ section {
   height: auto;
   width: 100%;
   float: left;
-}
-
-.historia .navbar p {
-  text-decoration: none;
-  margin-right: 20px;
-  font-family: "Playball", cursive;
-  font-size: 0.8rem;
-  font-weight: 100;
-  color: whitesmoke;
-  background-color: #531918;
-  border-radius: 3px;
-  -webkit-transition: 0.7s;
-  transition: 0.7s;
-  z-index: 2;
-}
-
-.historia .navbar p:hover {
-  border: 1px transparent;
-  color: #7e1a1a;
-  margin: 0 5px;
 }
 
 .historia h1 {

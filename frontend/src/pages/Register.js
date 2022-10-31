@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { register } from "../actions/userActions";
-import Navbar from "../componentes/Navbar";
 import SmallFooter from "../componentes/SmallFooter";
 import { Helmet } from "react-helmet-async";
 
@@ -31,7 +30,6 @@ const Register = (props) => {
 
   return (
     <div className="register">
-      <Navbar />
       <Helmet>
         <title>Registo - Quinta do Cabril</title>
       </Helmet>

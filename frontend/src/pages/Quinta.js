@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "../componentes/Navbar";
 import SmallFooter from "../componentes/SmallFooter";
 import exQ from "../images/exQ.jpg";
 import { Helmet } from "react-helmet-async";
@@ -10,7 +9,7 @@ const Quinta = () => {
       <Helmet>
         <title>Quinta - Quinta do Cabril</title>
       </Helmet>
-      <Navbar />
+
       <h1> A Quinta do Cabril</h1>
       <p>
         Uma casa senhorial reconstruída aquando da Adega em 2014, mantendo a

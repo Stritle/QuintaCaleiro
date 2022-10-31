@@ -1,7 +1,6 @@
 import React from "react";
 import VideoIntro from "../componentes/section_components/VideoIntro";
 import Intro from "../componentes/section_components/Intro";
-import Navbar from "../componentes/Navbar";
 import Vinhos from "../componentes/section_components/Vinhos";
 import Last from "../componentes/section_components/Last";
 import Fotos from "../componentes/section_components/Fotos";
@@ -14,8 +13,6 @@ const Home = (props) => {
       <Helmet>
         <title>Home - Quinta do Cabril</title>
       </Helmet>
-
-      <Navbar />
 
       <ImageIntro />
       <VideoIntro />

@@ -44,18 +44,27 @@ $corApontamentoHover: #bd3f3f;
     display: flex;
     a {
       text-decoration: none;
-      margin-right: 20px;
+    }
+    p {
+      text-decoration: none;
+      margin: 0 10px;
+      padding: 5px 10px;
       font-family: "Playball", cursive;
-      font-size: 0.9rem;
+      font-size: 0.7rem;
       font-weight: 100;
       color: whitesmoke;
+      background-color: #531918;
       border-radius: 3px;
       transition: 0.7s;
       z-index: 2;
-      color: black;
-      font-weight: 600;
-      font-size: 1.1rem;
-      margin-right: 1.1rem;
+      &:hover {
+        border: 1px transparent;
+        color: $corApontamentoHover;
+        margin: 0 0px;
+      }
+    }
+    a:last-child {
+      margin-right: 3rem;
     }
   }
   a {

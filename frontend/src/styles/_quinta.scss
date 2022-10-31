@@ -5,23 +5,7 @@ $buttonBackground: rgb(83, 25, 25);
 .quinta {
   height: auto;
   width: 100%;
-  .navbar p {
-    text-decoration: none;
-    margin-right: 20px;
-    font-family: "Playball", cursive;
-    font-size: 0.8rem;
-    font-weight: 100;
-    color: whitesmoke;
-    background-color: #531918;
-    border-radius: 3px;
-    transition: 0.7s;
-    z-index: 2;
-    &:hover {
-      border: 1px transparent;
-      color: $corApontamentoHover;
-      margin: 0 5px;
-    }
-  }
+
   h1 {
     margin: 10% 0 -3% 0;
     text-align: center;

@@ -5,16 +5,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { logout } from "../actions/userActions";
 
 const Navbar = (props) => {
-  // const state = {
-  //     isOpen: false
-  // };
-  // const handleToggle = () => {
-
-  //     this.setState({ isOpen: !this.state.isOpen })
-  // }
-
   const dispatch = useDispatch();
-
   const userSignin = useSelector((state) => state.userSignin);
   const { userInfo } = userSignin;
 
@@ -38,7 +29,7 @@ const Navbar = (props) => {
         <div className="user">
           <Link to="/signin">{!userInfo && <p>Entrar</p>}</Link>
           <Link to="/register">{!userInfo && <p>Registar</p>}</Link>
-          <Link>{userInfo && <p>{userInfo.name}</p>}</Link>
+          <a>{userInfo && <p>{userInfo.name}</p>}</a>
           <Link to="/" onClick={handleLogout}>
             {userInfo && <p>Sair</p>}
           </Link>
