@@ -166,11 +166,10 @@ section {
   text-decoration: none;
   margin: 0 10px;
   padding: 5px 10px;
-  font-family: "Playball", cursive;
-  font-size: 0.7rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS";
+  font-size: 1rem;
   font-weight: 100;
-  color: whitesmoke;
-  background-color: #531918;
+  color: #531918;
   border-radius: 3px;
   -webkit-transition: 0.7s;
   transition: 0.7s;
@@ -180,7 +179,7 @@ section {
 .navbar .user p:hover {
   border: 1px transparent;
   color: #bd3f3f;
-  margin: 0 0px;
+  margin: 0 10px;
 }
 
 .navbar .user a:last-child {
@@ -191,6 +190,14 @@ section {
   float: left;
   height: 100%;
   margin-left: 10%;
+}
+
+.navbar .qtyCart {
+  color: #fff;
+  padding: 3px 6px;
+  border-radius: 10px;
+  background-color: #531918;
+  font-size: 0.7rem;
 }
 
 @media (max-width: 650px) {
@@ -987,6 +994,13 @@ section {
   height: fit-content;
 }
 
+.cart .cart-container ul h1 {
+  color: #000000;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS";
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
 .cart .cart-container ul li {
   height: 12vh;
   width: 100%;
@@ -1247,7 +1261,7 @@ section {
 }
 
 .loja .content-loja .vinho-ul li:hover {
-  margin: 2px 0 1px 0;
+  background-color: #d0d0d0;
 }
 
 .loja .content-loja .vinho-ul li .vinho-item {
@@ -1321,7 +1335,7 @@ section {
 }
 
 .loja .content-loja .vinho-ul li .vinho-item .vinhos-qty div a:hover {
-  background-color: transparent;
+  background-color: #eaebdf;
   color: #7e1a1a;
 }
 
@@ -1538,6 +1552,9 @@ section {
 .smallFooter {
   height: 10vh;
   background-color: #5a2624;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1591,5 +1608,288 @@ section {
     margin-top: 15px;
     width: 20vw;
   }
+}
+
+.shipping {
+  margin-top: 25vh;
+  margin-inline: 30vw;
+}
+
+.shipping h1 {
+  color: #531918;
+}
+
+.shipping div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 10px;
+}
+
+.shipping div input {
+  border: 2px solid gainsboro;
+  border-radius: 5px;
+}
+
+.shipping button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #531918;
+  color: aliceblue;
+  border-radius: 10px;
+  border: 0;
+  text-transform: uppercase;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+  cursor: pointer;
+}
+
+.shipping button:hover {
+  background-color: aliceblue;
+  color: #531918;
+  border: 2px solid #531918;
+  font-weight: 600;
+}
+
+.payment {
+  margin-top: 25vh;
+  margin-inline: 30vw;
+}
+
+.payment h1 {
+  color: #531918;
+}
+
+.payment form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 30px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.payment form div label {
+  font-size: 1.3rem;
+}
+
+.payment form div label input {
+  border: 2px solid gainsboro;
+  border-radius: 5px;
+  color: #531918;
+  margin-right: 1vw;
+}
+
+.payment form button {
+  position: absolute;
+  margin-top: 10vh;
+  padding: 10px 20px;
+  background-color: #531918;
+  color: aliceblue;
+  border-radius: 10px;
+  border: 0;
+  text-transform: uppercase;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+  cursor: pointer;
+}
+
+.payment form button:hover {
+  background-color: aliceblue;
+  color: #531918;
+  border: 2px solid #531918;
+  font-weight: 600;
+}
+
+.placeorder {
+  margin-top: 25vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.placeorder .placeorderInfo {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+}
+
+.placeorder .placeorderInfo > div {
+  border: 1px solid #7a4242;
+  border-radius: 15px;
+  margin-bottom: 2vh;
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+.placeorder .placeorderInfo > div > div {
+  margin-left: 1vw;
+}
+
+.placeorder .placeorderInfo > div h3 {
+  margin-left: 1vw;
+}
+
+.placeorder .placeorderInfo > div li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px 0;
+}
+
+.placeorder .placeorderInfo > div li .cart-image {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.placeorder .placeorderInfo > div li .cart-image div {
+  margin: 0 auto;
+  height: 3vw;
+}
+
+.placeorder .placeorderInfo > div li .cart-image div img {
+  height: 100%;
+}
+
+.placeorder .placeorderInfo > div li .cart-name {
+  -webkit-box-flex: 5;
+      -ms-flex: 5;
+          flex: 5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  margin-right: 1vw;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 5vw;
+}
+
+.placeorder .placeorderInfo > div li .cart-name a {
+  font-size: 1rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-decoration: none;
+  color: #7a4242;
+}
+
+.placeorder .placeorderInfo > div li .cart-name h6 {
+  font-size: 1rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS";
+}
+
+.placeorder .placeorderInfo > div li .cart-price {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.placeorder .placeorderInfo > div li .cart-price h6 {
+  font-size: 1rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS";
+  margin-right: 1vw;
+}
+
+.placeorder .placeorderInfo > div .cart-list-container :first-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border: 0;
+}
+
+.placeorder .placeorderInfo > div .cart-list-container :first-child h6 {
+  font-size: 1rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS";
+  margin-right: 1vw;
+}
+
+.placeorder .placeorderInfo h3 {
+  font-size: 1.7rem;
+  color: #531918;
+}
+
+.placeorder .placeorder-action {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border: 1px solid #7a4242;
+  border-radius: 15px;
+  margin-right: 5vw;
+}
+
+.placeorder .placeorder-action h3 {
+  color: #531918;
+}
+
+.placeorder .placeorder-action li {
+  list-style: none;
+  margin-left: 1vw;
+  margin-top: 1vh;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS";
+}
+
+.placeorder .placeorder-action button {
+  margin-top: 1vh;
+  padding: 10px 20px;
+  background-color: #531918;
+  color: aliceblue;
+  border-radius: 10px;
+  border: 0;
+  text-transform: uppercase;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+  cursor: pointer;
+}
+
+.placeorder .placeorder-action button:hover {
+  background-color: aliceblue;
+  color: #531918;
+  border: 2px solid #531918;
+  font-weight: 600;
+}
+
+h6 {
+  font-size: 1rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS";
+}
+
+.infoDestaque {
+  background-color: #531918;
+  display: inline-block;
+  border-radius: 15px;
+  color: white;
+  padding: 0 5px;
+  margin: 5px 1px;
+  text-transform: uppercase;
+  font-size: 0.7rem;
 }
 /*# sourceMappingURL=App.css.map */

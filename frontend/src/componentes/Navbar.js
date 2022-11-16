@@ -3,15 +3,18 @@ import { Link } from "react-router-dom";
 import logoNavbar from "../images/logoCabrilNav.png";
 import { useSelector, useDispatch } from "react-redux";
 import { logout } from "../actions/userActions";
+import { AiOutlineShoppingCart } from "react-icons/ai";
+import { AiOutlineUser } from "react-icons/ai";
 
 const Navbar = (props) => {
   const dispatch = useDispatch();
   const userSignin = useSelector((state) => state.userSignin);
+  const cart = useSelector((state) => state.cart);
   const { userInfo } = userSignin;
+  const { cartItems } = cart;
 
   const handleLogout = () => {
     dispatch(logout());
-    props.history.push("/signin");
   };
 
   return (
@@ -27,11 +30,22 @@ const Navbar = (props) => {
         </div>
 
         <div className="user">
+          <Link to="/cart">
+            <AiOutlineShoppingCart size={30} color="#531918" />
+            <strong className="qtyCart">{cartItems.length}</strong>
+          </Link>
           <Link to="/signin">{!userInfo && <p>Entrar</p>}</Link>
           <Link to="/register">{!userInfo && <p>Registar</p>}</Link>
-          <a>{userInfo && <p>{userInfo.name}</p>}</a>
+          <a>
+            {userInfo && (
+              <p>
+                <AiOutlineUser />
+                {userInfo.name}
+              </p>
+            )}
+          </a>
           <Link to="/" onClick={handleLogout}>
-            {userInfo && <p>Sair</p>}
+            {userInfo && <p>Sair </p>}
           </Link>
         </div>
       </div>

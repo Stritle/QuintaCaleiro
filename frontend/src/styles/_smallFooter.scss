@@ -1,6 +1,9 @@
 .smallFooter {
   height: 10vh;
   background-color: #5a2624;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
   display: flex;
   div {
     flex: 3;

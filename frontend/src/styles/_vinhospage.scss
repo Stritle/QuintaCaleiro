@@ -34,7 +34,7 @@ $buttonBackground: rgb(83, 25, 25);
         box-shadow: 3px 3px 10px $buttonBoxShadow;
         transition: 0.5s;
         &:hover {
-          margin: 2px 0 1px 0;
+          background-color: rgb(208, 208, 208);
         }
 
         .vinho-item {
@@ -95,7 +95,7 @@ $buttonBackground: rgb(83, 25, 25);
                 border-radius: 1px;
 
                 &:hover {
-                  background-color: transparent;
+                  background-color: rgb(234, 235, 223);
                   color: $corApontamentoHover;
                 }
               }

@@ -1,26 +1,27 @@
 import express from "express";
 import Vinho from "../models/vinhoModel.js";
-import { getToken } from "../util.js";
+// import data from "../data.js";
+// import { isAuth, isAdmin } from "../util";
 
 const router = express.Router();
 
-router.post("/", async (req, res) => {
-  const vinho = new Vinho({
-    name: req.body.name,
-    image: req.body.emimageil,
-    countInStock: req.body.countInStock,
-    description: req.body.description,
-    price: req.body.price,
-    rating: req.body.rating,
-    numReviews: req.body.numReviews,
-  });
-  const newVinho = await vinho.save();
-  if (newVinho) {
-    return res
-      .status(201)
-      .send({ message: "Novo Vinho Criado", data: newVinho });
+router.get("/", async (req, res) => {
+  const vinhos = await Vinho.find();
+  res.send(vinhos);
+});
+
+// router.get("/seed", async (req, res) => { addicionar vinhos atraves do ficheiro data.js
+//   const createdVinhos = await Vinho.insertMany(data.vinhos);
+//   res.send({ createdVinhos });
+// });
+
+router.get("/:id", async (req, res) => {
+  const vinho = await Vinho.findOne({ _id: req.params.id });
+  if (vinho) {
+    res.send(vinho);
+  } else {
+    res.status(404).send({ message: "Product Not Found." });
   }
-  res.status(500).send({ message: "Erro ao criar o Vinho!" });
 });
 
 export default router;

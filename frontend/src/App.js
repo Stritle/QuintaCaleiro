@@ -13,6 +13,10 @@ import Noticias from "./pages/Noticias";
 import Quinta from "./pages/Quinta";
 import ManageVinhos from "./pages/ManageVinhos";
 import Navbar from "./componentes/Navbar";
+import ShippingAdress from "./pages/ShippingAdress";
+import Payment from "./pages/Payment";
+import PlaceOrder from "./pages/PlaceOrder";
+import Order from "./pages/Order";
 
 function App() {
   return (
@@ -30,6 +34,10 @@ function App() {
         <Route exact path="/signin" component={SignIn} />
         <Route exact path="/register" component={Register} />
         <Route exact path="/managevinhos" component={ManageVinhos} />
+        <Route exact path="/shipping" component={ShippingAdress} />
+        <Route exact path="/payment" component={Payment} />
+        <Route exact path="/placeorder" component={PlaceOrder} />
+        <Route path="/order/:id" component={Order} />
 
         <Route component={Error} />
       </Switch>

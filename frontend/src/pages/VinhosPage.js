@@ -15,7 +15,7 @@ function VinhosPage(props) {
     dispatch(listVinhos());
     return () => {};
   }, []);
-
+  console.log(vinhos);
   return loading ? (
     <div>Loading...</div>
   ) : error ? (

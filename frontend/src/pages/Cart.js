@@ -28,9 +28,10 @@ const Cart = (props) => {
 
   const checkOutHandler = () => {
     if (userInfo) {
-      history.push("/");
+      history.push("/shipping");
+    } else {
+      history.push("/signin");
     }
-    history.push("/signin");
   };
 
   return (
@@ -59,7 +60,7 @@ const Cart = (props) => {
             <h1>Nenhum Produto</h1>
           ) : (
             cartItems.map((item) => (
-              <li key={item._id} className="cart-item">
+              <li key={item.vinho} className="cart-item">
                 <div className="cart-image">
                   <img src={item.image} alt="cartFoto"></img>
                 </div>
@@ -85,7 +86,14 @@ const Cart = (props) => {
           )}
         </ul>
         <div className="cart-content-cabeçalho">
-          <button onClick={checkOutHandler}>Finalizar Compra</button>
+          {cartItems.length === 0 ? (
+            <button onClick={() => history.push("/vinho")}>
+              Adicione Produtos
+            </button>
+          ) : (
+            <button onClick={checkOutHandler}>Finalizar Compra</button>
+          )}
+
           <p>
             Preço Total: {cartItems.reduce((a, c) => a + c.price * c.qty, 0)}€
           </p>
