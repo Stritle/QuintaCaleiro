@@ -1,12 +1,13 @@
 import express from "express";
 import expressAsyncHandler from "express-async-handler";
 import Order from "../models/orderModel.js";
-import { getToken } from "../util.js";
+import { isAuth } from "../util.js";
 
 const orderRouter = express.Router();
 
 orderRouter.post(
   "/",
+  isAuth,
   expressAsyncHandler(async (req, res) => {
     if (req.body.orderItems.length === 0) {
       res.status(400).send({ message: "cart empty" });
@@ -37,7 +38,7 @@ orderRouter.post(
 //   res.send(orders);
 // });
 
-orderRouter.get("/:id", async (req, res) => {
+orderRouter.get("/:id", isAuth, async (req, res) => {
   const order = await Order.findOne({ _id: req.params.id });
   if (order) {
     res.send(order);
