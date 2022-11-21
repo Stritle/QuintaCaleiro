@@ -1,4 +1,8 @@
+
+[build]
+fuctions="fuctions"
+
 [[redirects]]
+to = "/.netlify/fuctions/api/vinhos"
 from = "/*"
-to = "/index.html"
-status = 200
+status=200
