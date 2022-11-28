@@ -56,5 +56,5 @@ app.use((err, req, res, next) => {
 });
 
 app.listen(config.PORT, () => {
-  console.log("Server Connected");
+  console.log(`Server at http://localhost:${config.PORT}`);
 });
