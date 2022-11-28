@@ -52,6 +52,6 @@ app.get("*", (req, res) => {
 //   res.send(data.vinhos);
 // });
 
-app.listen(process.env.PORT || 5000, () => {
+app.listen(config.PORT, () => {
   console.log("Server Connected");
 });
