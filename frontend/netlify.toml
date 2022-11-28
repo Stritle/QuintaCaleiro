@@ -1,8 +1,5 @@
 
-[build]
-fuctions="fuctions"
-
 [[redirects]]
-to = "/.netlify/fuctions/api/vinhos"
-from = "/*"
-status=200
+  from = "/api/*"
+  to = "https://quintacabril.netlify.app/" # Change to your server address/IP
+  status = 200
