@@ -28,7 +28,11 @@ const createOrder = (order) => async (dispatch, getState) => {
     } = getState();
     const {
       data: { data: newOrder },
-    } = await Axios.post("/api/orders", order);
+    } = await Axios.post("/api/orders", order, {
+      headers: {
+        Authorization: userInfo.token,
+      },
+    });
     dispatch({ type: ORDER_CREATE_SUCCESS, payload: newOrder });
   } catch (error) {
     dispatch({ type: ORDER_CREATE_FAIL, payload: error.message });
@@ -42,7 +46,7 @@ const listMyOrders = () => async (dispatch, getState) => {
       userSignin: { userInfo },
     } = getState();
     const { data } = await Axios.get("/api/orders/mine", {
-      headers: { Authorization: "Bearer " + userInfo.token },
+      headers: { Authorization: userInfo.token },
     });
     dispatch({ type: MY_ORDER_LIST_SUCCESS, payload: data });
   } catch (error) {
@@ -57,7 +61,7 @@ const listOrders = () => async (dispatch, getState) => {
       userSignin: { userInfo },
     } = getState();
     const { data } = await Axios.get("/api/orders", {
-      headers: { Authorization: "Bearer " + userInfo.token },
+      headers: { Authorization: userInfo.token },
     });
     dispatch({ type: ORDER_LIST_SUCCESS, payload: data });
   } catch (error) {
@@ -72,7 +76,7 @@ const detailsOrder = (orderId) => async (dispatch, getState) => {
       userSignin: { userInfo },
     } = getState();
     const { data } = await Axios.get("/api/orders/" + orderId, {
-      headers: { Authorization: "Bearer " + userInfo.token },
+      headers: { Authorization: userInfo.token },
     });
     dispatch({ type: ORDER_DETAILS_SUCCESS, payload: data });
   } catch (error) {
@@ -106,7 +110,7 @@ const deleteOrder = (orderId) => async (dispatch, getState) => {
       userSignin: { userInfo },
     } = getState();
     const { data } = await Axios.delete("/api/orders/" + orderId, {
-      headers: { Authorization: "Bearer " + userInfo.token },
+      headers: { Authorization: userInfo.token },
     });
     dispatch({ type: ORDER_DELETE_SUCCESS, payload: data });
   } catch (error) {

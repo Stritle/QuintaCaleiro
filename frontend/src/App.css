@@ -160,6 +160,19 @@ section {
 
 .navbar .user a {
   text-decoration: none;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS";
+  font-size: 1rem;
+  font-weight: 100;
+  color: #531918;
+  border-radius: 3px;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+  z-index: 2;
+}
+
+.navbar .user a:hover {
+  border: 1px transparent;
+  color: #bd3f3f;
 }
 
 .navbar .user p {
@@ -1025,41 +1038,97 @@ section {
 
 .cart .cart-container ul li .cart-name {
   width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .cart .cart-container ul li .cart-name p {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  margin-top: 40px;
 }
 
 .cart .cart-container ul li .cart-price {
   width: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .cart .cart-container ul li .cart-price p {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  margin-top: 40px;
   text-align: center;
 }
 
 .cart .cart-container ul li .cart-qty {
   width: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .cart .cart-container ul li .cart-qty p {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  margin-top: 40px;
   text-align: center;
+}
+
+.cart .cart-container ul li .cart-qty button {
+  height: 3vh;
+  width: 1.5vw;
+  background-color: #531918;
+  color: #fff;
+  font-weight: 600;
+  border-color: transparent;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
+.cart .cart-container ul li .cart-qty button:hover {
+  background-color: #fff;
+  color: #531918;
+  border-color: #531918;
 }
 
 .cart .cart-container ul li .cart-price-total {
   width: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .cart .cart-container ul li .cart-price-total p {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  margin-top: 40px;
   text-align: center;
+}
+
+.cart .cart-container ul li .cart-remover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .cart .cart-container ul li .cart-remover svg {
@@ -1073,7 +1142,6 @@ section {
 }
 
 .cart .cart-container ul li .cart-remover button {
-  margin-top: 38px;
   margin-left: 38px;
   background-color: transparent;
   border: 0;

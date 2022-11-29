@@ -16,16 +16,16 @@ const orderItemSchema = new mongoose.Schema({
   qty: { type: Number, required: true },
   image: { type: String, required: true },
   price: { type: String, required: true },
-  // vinho: {
-  //   type: mongoose.Schema.Types.ObjectId,
-  //   ref: "Vinho",
-  //   required: true,
-  // },
+  vinho: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Vinho",
+    required: true,
+  },
 });
 
 const orderSchema = new mongoose.Schema(
   {
-    // user: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true },
+    user: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true },
     orderItems: [orderItemSchema],
     shipping: shippingSchema,
     payment: paymentSchema,

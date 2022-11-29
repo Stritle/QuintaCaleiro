@@ -36,14 +36,14 @@ const Navbar = (props) => {
           </Link>
           <Link to="/signin">{!userInfo && <p>Entrar</p>}</Link>
           <Link to="/register">{!userInfo && <p>Registar</p>}</Link>
-          <a>
-            {userInfo && (
-              <p>
-                <AiOutlineUser />
-                {userInfo.name}
-              </p>
-            )}
-          </a>
+
+          {userInfo && (
+            <p>
+              <AiOutlineUser />
+              <Link to="/profile"> {userInfo.name}</Link>
+            </p>
+          )}
+
           <Link to="/" onClick={handleLogout}>
             {userInfo && <p>Sair </p>}
           </Link>

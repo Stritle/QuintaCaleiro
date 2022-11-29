@@ -1,8 +1,9 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { addToCart, removeFromCart } from "../actions/cartActions";
 import { useDispatch, useSelector } from "react-redux";
 import { TiDeleteOutline } from "react-icons/ti";
 import { useHistory } from "react-router-dom";
+import axios from "axios";
 
 const Cart = (props) => {
   const cart = useSelector((state) => state.cart);
@@ -16,13 +17,16 @@ const Cart = (props) => {
   const qty = props.location.search
     ? Number(props.location.search.split("=")[1])
     : 1;
+
   const dispatch = useDispatch();
   const removeFromCartHandler = (vinhoId) => {
     dispatch(removeFromCart(vinhoId));
   };
+
   useEffect(() => {
     if (vinhoId) {
       dispatch(addToCart(vinhoId, qty));
+      console.log(qty, vinhoId);
     }
   }, []);
 
@@ -33,7 +37,11 @@ const Cart = (props) => {
       history.push("/signin");
     }
   };
-
+  const updateCartHandler = (vinhoId, qty) => {
+    if (vinhoId) {
+      dispatch(addToCart(vinhoId, qty));
+    }
+  };
   return (
     <div className="cart">
       <h3>Carrinho de Compras</h3>
@@ -71,7 +79,17 @@ const Cart = (props) => {
                   <p>{item.price}€</p>
                 </div>
                 <div className="cart-qty">
+                  <button
+                    onClick={() => updateCartHandler(item.vinho, item.qty - 1)}
+                  >
+                    -
+                  </button>
                   <p>{item.qty}</p>
+                  <button
+                    onClick={() => updateCartHandler(item.vinho, item.qty + 1)}
+                  >
+                    +
+                  </button>
                 </div>
                 <div className="cart-price-total">
                   <p>{item.price * item.qty}€</p>

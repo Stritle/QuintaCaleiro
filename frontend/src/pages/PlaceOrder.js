@@ -53,7 +53,7 @@ const PlaceOrder = (props) => {
       <div className="placeorder">
         <div className="placeorderInfo">
           <div>
-            <h3>Dados da Entrega</h3>
+            <h3>Dados da Entregassssssssssssssssss</h3>
             <div>
               {cart.shipping.address}, {cart.shipping.city},
               {cart.shipping.postalCode}, {cart.shipping.country},

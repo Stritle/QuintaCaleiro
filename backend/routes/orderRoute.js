@@ -14,6 +14,7 @@ orderRouter.post(
     } else {
       const newOrder = new Order({
         orderItems: req.body.orderItems,
+        user: req.user._id,
         shipping: req.body.shipping,
         payment: req.body.payment,
         itemsPrice: req.body.itemsPrice,
@@ -29,16 +30,16 @@ orderRouter.post(
   })
 );
 
-// orderRouter.get("/", async (req, res) => {
-//   const orders = await Order.find({}).populate("user");
-//   res.send(orders);
-// });
-// orderRouter.get("/mine", async (req, res) => {
-//   const orders = await Order.find({ user: req.user._id });
-//   res.send(orders);
-// });
+orderRouter.get("/", isAuth, async (req, res) => {
+  const orders = await Order.find({}).populate("user");
+  res.send(orders);
+});
+orderRouter.get("/mine", isAuth, async (req, res) => {
+  const orders = await Order.find({ user: req.user._id });
+  res.send(orders);
+});
 
-orderRouter.get("/:id", isAuth, async (req, res) => {
+orderRouter.get("/:id", async (req, res) => {
   const order = await Order.findOne({ _id: req.params.id });
   if (order) {
     res.send(order);

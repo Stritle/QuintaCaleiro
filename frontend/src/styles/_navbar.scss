@@ -44,6 +44,17 @@ $corApontamentoHover: #bd3f3f;
     display: flex;
     a {
       text-decoration: none;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS";
+      font-size: 1rem;
+      font-weight: 100;
+      color: #531918;
+      border-radius: 3px;
+      transition: 0.7s;
+      z-index: 2;
+      &:hover {
+        border: 1px transparent;
+        color: $corApontamentoHover;
+      }
     }
     p {
       text-decoration: none;

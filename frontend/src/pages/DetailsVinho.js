@@ -9,7 +9,9 @@ import SmallFooter from "../componentes/SmallFooter";
 const DetailsVinho = (props) => {
   const [qty, setQty] = useState(1);
   const vinhoDetails = useSelector((state) => state.vinhoDetails);
+  // const cart = useSelector((state) => state.cart);
   const { vinho, loading, error } = vinhoDetails;
+  // const { cartItems } = cart;
 
   const dispatch = useDispatch();
 
@@ -21,6 +23,8 @@ const DetailsVinho = (props) => {
   }, []);
 
   const handdleAddToCart = () => {
+    // const existItem = cartItems.find((x) => x._id === vinho._id);
+    // const quantity = existItem ? existItem.quantity + 1 : 1;
     props.history.push("/cart/" + props.match.params.id + "?qty=" + qty);
   };
 

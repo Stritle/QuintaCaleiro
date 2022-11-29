@@ -9,29 +9,29 @@ const getToken = (user) => {
       email: user.email,
       isAdmin: user.isAdmin,
     },
-    config.JWT_SECRET,
+    config.JWT_SECRET || "somethingsecret",
     {
       expiresIn: "48h",
     }
   );
 };
-
 const isAuth = (req, res, next) => {
   const token = req.headers.authorization;
+
   if (token) {
-    const onlyToken = token.slice(7, token.lenght);
+    const onlyToken = token.slice(0, token.length);
     jwt.verify(onlyToken, config.JWT_SECRET, (err, decode) => {
       if (err) {
-        return res.status(401).send({ msg: "Invalid Token" });
+        return res.status(401).send({ message: "Invalid Token" });
       }
-      req.user = token;
+      req.user = decode;
       next();
       return;
     });
+  } else {
+    return res.status(401).send({ message: "Token is not supplied." });
   }
-  return res.status(401).send({ msg: "token is not supplied" });
 };
-
 const isAdmin = (req, res, next) => {
   if (req.user && req.user.isAdmin) {
     return next();

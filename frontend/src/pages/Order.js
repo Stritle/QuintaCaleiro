@@ -1,16 +1,12 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { createOrder, detailsOrder, payOrder } from "../actions/orderActions";
+import { detailsOrder, payOrder } from "../actions/orderActions";
 import PaypalButton from "../componentes/PaypalButton";
 
 function Order(props) {
   const orderPay = useSelector((state) => state.orderPay);
-  const {
-    loading: loadingPay,
-    success: successPay,
-    error: errorPay,
-  } = orderPay;
+  const { loading: loadingPay, success: successPay } = orderPay;
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -20,7 +16,7 @@ function Order(props) {
       dispatch(detailsOrder(props.match.params.id));
     }
     return () => {};
-  }, [successPay]);
+  }, [successPay, dispatch]);
 
   const handleSuccessPayment = (paymentResult) => {
     dispatch(payOrder(order, paymentResult));
@@ -102,10 +98,11 @@ function Order(props) {
             <li className="placeorder-actions-payment">
               {loadingPay && <div>Finishing Payment...</div>}
               {!order.isPaid && (
-                <PaypalButton
-                  amount={order.totalPrice}
-                  onSuccess={handleSuccessPayment}
-                />
+                // <PaypalButton
+                //   amount={order.totalPrice}
+                //   onSuccess={handleSuccessPayment}
+                // />
+                <h1>paypal</h1>
               )}
             </li>
             <li>
