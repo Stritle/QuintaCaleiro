@@ -10,49 +10,50 @@ const OrderHistory = (props) => {
   useEffect(() => {
     dispatch(listMyOrders());
   }, [dispatch]);
-  console.log(orders);
   return (
-    <div>
-      OrderHistory
-      {loading ? (
-        <div>loading</div>
-      ) : error ? (
-        <div>{error}</div>
-      ) : (
-        <table>
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>DATE</th>
-              <th>TOTAL</th>
-              <th>PAID</th>
-              <th>DELIVERED</th>
-              <th>ACTIONS</th>
-            </tr>
-          </thead>
-          <tbody>
-            {orders.map((order) => (
-              <tr key={order._id}>
-                <td>{order._id}</td>
-                <td>{order.createAt}</td>
-                <td>{order.totalPrice}</td>
-                <td>{order.isPaid ? order.piadAt : "Não"}</td>
-                <td>{order.isDelivered ? order.deliveredAt : "Não"}</td>
-                <td>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      props.history.push(`/order/${order._id}`);
-                    }}
-                  >
-                    Details
-                  </button>
-                </td>
+    <div className="orderHistory">
+      <h1>Histórico de Encomendas</h1>
+      <div className="table-container">
+        {loading ? (
+          <div>loading</div>
+        ) : error ? (
+          <div>{error}</div>
+        ) : (
+          <table>
+            <thead>
+              <tr>
+                <th className="mr-2">ID ENCOMENDA</th>
+                <th>DATA</th>
+                <th>PREÇO TOTAL</th>
+                <th>PAGO</th>
+                <th>ENTREGUE</th>
+                <th>DETALHES</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
-      )}
+            </thead>
+            <tbody>
+              {orders.map((order) => (
+                <tr key={order._id}>
+                  <td>{order._id}</td>
+                  <td>{order.createdAt}</td>
+                  <td>{order.totalPrice}€</td>
+                  <td>{order.isPaid ? order.paidAt : "Não"}</td>
+                  <td>{order.isDelivered ? order.deliveredAt : "Não"}</td>
+                  <td>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        props.history.push(`/order/${order._id}`);
+                      }}
+                    >
+                      VER
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        )}
+      </div>
     </div>
   );
 };

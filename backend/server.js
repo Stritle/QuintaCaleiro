@@ -25,11 +25,12 @@ if (mongodbUrl) {
 
 const app = express();
 app.use(bodyParser.json());
+
 app.use("/api/users", userRoute);
 app.use("/api/vinhos", vinhoRoute);
 app.use("/api/orders", orderRoute);
 app.get("/api/config/paypal", (req, res) => {
-  res.send(process.env.PAYPAL_CLIENT_ID || "SB");
+  res.send(config.PAYPAL_CLIENT_ID || "SB");
 });
 
 const __dirname = path.resolve();

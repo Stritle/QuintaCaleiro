@@ -10,6 +10,11 @@ a {
   font-family: "Playball", cursive;
 }
 
+.p-small {
+  font-size: 0.6rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS";
+}
+
 .rating {
   color: #7a3939;
 }
@@ -175,24 +180,53 @@ section {
   color: #bd3f3f;
 }
 
-.navbar .user p {
+.navbar .user a p {
+  margin-top: 2px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS";
+}
+
+.navbar .user .dropdown button {
+  position: relative;
   text-decoration: none;
   margin: 0 10px;
-  padding: 5px 10px;
+  padding: 0 10px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS";
   font-size: 1rem;
   font-weight: 100;
   color: #531918;
+  background-color: transparent;
+  border: 0;
   border-radius: 3px;
   -webkit-transition: 0.7s;
   transition: 0.7s;
   z-index: 2;
+  cursor: pointer;
 }
 
-.navbar .user p:hover {
+.navbar .user .dropdown button:hover {
   border: 1px transparent;
   color: #bd3f3f;
   margin: 0 10px;
+}
+
+.navbar .user .dropdown .dropdown-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 20px;
+  margin-top: 5px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  opacity: 0;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.navbar .user .dropdown .link:focus + .dropdown-menu {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .navbar .user a:last-child {
@@ -1095,6 +1129,7 @@ section {
   border-color: transparent;
   -webkit-transition: 0.7s;
   transition: 0.7s;
+  cursor: pointer;
 }
 
 .cart .cart-container ul li .cart-qty button:hover {
@@ -1927,6 +1962,7 @@ section {
 
 .placeorder .placeorder-action button {
   margin-top: 1vh;
+  margin-bottom: 2vh;
   padding: 10px 20px;
   background-color: #531918;
   color: aliceblue;
@@ -1959,5 +1995,69 @@ h6 {
   margin: 5px 1px;
   text-transform: uppercase;
   font-size: 0.7rem;
+}
+
+.orderHistory {
+  margin-top: 25vh;
+  margin-inline: 20vw;
+}
+
+.orderHistory h1 {
+  color: #531918;
+}
+
+.orderHistory .table-container {
+  margin-top: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.orderHistory .table-container table {
+  border: 1px solid #531918;
+  border-radius: 15px;
+}
+
+.orderHistory .table-container table thead th {
+  border-bottom: 2px solid #531918;
+  padding: 015px;
+  color: #531918;
+}
+
+.orderHistory .table-container table tbody tr td {
+  padding: 0 1vw;
+  text-align: center;
+}
+
+.orderHistory .table-container table tbody tr td button {
+  margin-top: 0.5vh;
+  margin-bottom: 0.5vh;
+  padding: 4px 10px;
+  background-color: #531918;
+  color: aliceblue;
+  border-radius: 10px;
+  border: 0;
+  text-transform: uppercase;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+  cursor: pointer;
+}
+
+.orderHistory .table-container table tbody tr td button:hover {
+  background-color: aliceblue;
+  color: #531918;
+  font-weight: 600;
+}
+
+.profile {
+  margin-top: 25vh;
+  margin-inline: 20vw;
+}
+
+.profile h1 {
+  color: #531918;
 }
 /*# sourceMappingURL=App.css.map */

@@ -2,21 +2,80 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { detailsOrder, payOrder } from "../actions/orderActions";
-import PaypalButton from "../componentes/PaypalButton";
+import { PayPalButtons, usePayPalScriptReducer } from "@paypal/react-paypal-js";
+import axios from "axios";
+import { getError } from "../utils";
+import { toast } from "react-toastify";
 
 function Order(props) {
   const orderPay = useSelector((state) => state.orderPay);
   const { loading: loadingPay, success: successPay } = orderPay;
   const dispatch = useDispatch();
 
+  const [{ isPending }, paypalDispatch] = usePayPalScriptReducer();
+
+  function createOrder(data, actions) {
+    return actions.order
+      .create({
+        purchase_units: [
+          {
+            amount: { value: order.totalPrice },
+          },
+        ],
+      })
+      .then((orderID) => {
+        return orderID;
+      });
+  }
+
+  function onApprove(data, actions) {
+    return actions.order.capture().then(async function (details) {
+      try {
+        dispatch({ type: "PAY_REQUEST" });
+        const { data } = await axios.put(
+          `/api/orders/${order._id}/pay`,
+          details,
+          {
+            // headers: { authorization: ` ${userInfo.token}` },
+          }
+        );
+        dispatch({ type: "PAY_SUCCESS", payload: data });
+        toast.success("Order is paid");
+      } catch (err) {
+        dispatch({ type: "PAY_FAIL", payload: getError(err) });
+        toast.error(getError(err));
+      }
+    });
+  }
+  function onError(err) {
+    toast.error(getError(err));
+  }
+
   useEffect(() => {
+    if (order) {
+      const loadPayPalScript = async () => {
+        const { data: clientID } = await axios.get("api/config/paypal", {
+          // headers: { authorization: { userInfo } },
+        });
+        paypalDispatch({
+          type: "resetOptions",
+          value: {
+            "client-id": clientID,
+            currenncy: "EUR",
+          },
+        });
+        paypalDispatch({ type: "setLoadingStatus", value: "pending" });
+      };
+      loadPayPalScript();
+    }
+
     if (successPay) {
       props.history.push("/profile");
     } else {
       dispatch(detailsOrder(props.match.params.id));
     }
     return () => {};
-  }, [successPay, dispatch]);
+  }, [successPay, dispatch, paypalDispatch]);
 
   const handleSuccessPayment = (paymentResult) => {
     dispatch(payOrder(order, paymentResult));
@@ -64,6 +123,7 @@ function Order(props) {
                 </div>
                 <div>
                   <h6>Preço</h6>
+                  <p className="p-small">(Unidade)</p>
                 </div>
               </li>
               {order.orderItems.length === 0 ? (
@@ -98,11 +158,19 @@ function Order(props) {
             <li className="placeorder-actions-payment">
               {loadingPay && <div>Finishing Payment...</div>}
               {!order.isPaid && (
-                // <PaypalButton
-                //   amount={order.totalPrice}
-                //   onSuccess={handleSuccessPayment}
-                // />
-                <h1>paypal</h1>
+                <div>
+                  {isPending ? (
+                    <h1>Loading</h1>
+                  ) : (
+                    <div>
+                      <PayPalButtons
+                        createOrder={createOrder}
+                        onApprove={onApprove}
+                        onError={onError}
+                      ></PayPalButtons>
+                    </div>
+                  )}
+                </div>
               )}
             </li>
             <li>

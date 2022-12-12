@@ -55,23 +55,45 @@ $corApontamentoHover: #bd3f3f;
         border: 1px transparent;
         color: $corApontamentoHover;
       }
-    }
-    p {
-      text-decoration: none;
-      margin: 0 10px;
-      padding: 5px 10px;
-      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS";
-      font-size: 1rem;
-      font-weight: 100;
-      color: #531918;
-      border-radius: 3px;
-      transition: 0.7s;
-      z-index: 2;
-      &:hover {
-        border: 1px transparent;
-        color: $corApontamentoHover;
-        margin: 0 10px;
+      p {
+        margin-top: 2px;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS";
       }
+    }
+    .dropdown {
+      button {
+        position: relative;
+        text-decoration: none;
+        margin: 0 10px;
+        padding: 0 10px;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS";
+        font-size: 1rem;
+        font-weight: 100;
+        color: #531918;
+        background-color: transparent;
+        border: 0;
+        border-radius: 3px;
+        transition: 0.7s;
+        z-index: 2;
+        cursor: pointer;
+        &:hover {
+          border: 1px transparent;
+          color: $corApontamentoHover;
+          margin: 0 10px;
+        }
+      }
+      .dropdown-menu {
+        display: flex;
+        padding-left: 20px;
+        margin-top: 5px;
+        flex-direction: column;
+        opacity: 0;
+        transition: 0.5s ease-in-out;
+      }
+    }
+    .dropdown .link:focus + .dropdown-menu {
+      opacity: 1;
+      pointer-events: auto;
     }
     a:last-child {
       margin-right: 3rem;

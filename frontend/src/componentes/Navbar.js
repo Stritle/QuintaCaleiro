@@ -38,10 +38,16 @@ const Navbar = (props) => {
           <Link to="/register">{!userInfo && <p>Registar</p>}</Link>
 
           {userInfo && (
-            <p>
-              <AiOutlineUser />
-              <Link to="/profile"> {userInfo.name}</Link>
-            </p>
+            <div className="dropdown">
+              <button className="link">
+                <AiOutlineUser />
+                {userInfo.name}
+              </button>
+              <div className="dropdown-menu">
+                <Link to="/profile">Perfil</Link>
+                <Link to="/orderHistory">Encomendas</Link>
+              </div>
+            </div>
           )}
 
           <Link to="/" onClick={handleLogout}>

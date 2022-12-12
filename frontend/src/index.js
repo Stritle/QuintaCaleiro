@@ -5,7 +5,7 @@ import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter as Router } from "react-router-dom";
-
+import { PayPalScriptProvider } from "@paypal/react-paypal-js";
 import store from "./store";
 import { HelmetProvider } from "react-helmet-async";
 
@@ -13,9 +13,11 @@ ReactDOM.render(
   <Provider store={store}>
     <React.StrictMode>
       <HelmetProvider>
-        <Router>
-          <App />
-        </Router>
+        <PayPalScriptProvider deferLoading={true}>
+          <Router>
+            <App />
+          </Router>
+        </PayPalScriptProvider>
       </HelmetProvider>
     </React.StrictMode>
   </Provider>,

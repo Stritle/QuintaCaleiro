@@ -18,7 +18,7 @@ const Payment = (props) => {
       <h1>Método de Pagamento</h1>
       <div>
         <form onSubmit={submitHandler}>
-          <div>
+          {/* <div>
             <label>
               <input
                 type="radio"
@@ -29,7 +29,7 @@ const Payment = (props) => {
               />
               Stripe
             </label>
-          </div>
+          </div> */}
           <div>
             <label>
               <input
