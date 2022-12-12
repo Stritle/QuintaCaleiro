@@ -44,7 +44,7 @@ const Navbar = (props) => {
                 {userInfo.name}
               </button>
               <div className="dropdown-menu">
-                <Link to="/profile">Perfil</Link>
+                <Link to="/profile">Editar Perfil</Link>
                 <Link to="/orderHistory">Encomendas</Link>
               </div>
             </div>

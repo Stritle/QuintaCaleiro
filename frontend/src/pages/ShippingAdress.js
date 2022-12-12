@@ -22,7 +22,7 @@ const ShippingAdress = (props) => {
       <h1>Dados de Morada</h1>
       <form onSubmit={submitHandler}>
         <div>
-          <label>Nome Completo</label>
+          <label>Nome Completo:</label>
           <input
             id="fullName"
             name="fullName"
@@ -35,7 +35,7 @@ const ShippingAdress = (props) => {
           ></input>
         </div>
         <div>
-          <label>Morada</label>
+          <label>Morada:</label>
           <input
             id="address"
             name="address"
@@ -48,7 +48,7 @@ const ShippingAdress = (props) => {
           ></input>
         </div>
         <div>
-          <label>Cidade</label>
+          <label>Cidade:</label>
           <input
             id="city"
             name="city"
@@ -61,7 +61,7 @@ const ShippingAdress = (props) => {
           ></input>
         </div>
         <div>
-          <label>Código Postal</label>
+          <label>Código Postal:</label>
           <input
             id="postalCode"
             name="postalCode"
@@ -74,7 +74,7 @@ const ShippingAdress = (props) => {
           ></input>
         </div>
         <div>
-          <label>País</label>
+          <label>País:</label>
           <input
             id="country"
             name="country"

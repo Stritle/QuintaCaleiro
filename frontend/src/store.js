@@ -7,7 +7,11 @@ import {
 } from "./reducers/vinhoReducer";
 import { cartReducer } from "./reducers/cartReducer";
 import Cookie from "js-cookie";
-import { userRegisterReducer, userSigninReducer } from "./reducers/userReducer";
+import {
+  userRegisterReducer,
+  userSigninReducer,
+  userUpdateReducer,
+} from "./reducers/userReducer";
 import {
   myOrderListReducer,
   orderCreateReducer,
@@ -23,6 +27,7 @@ const userInfo = Cookie.getJSON("userInfo") || null;
 const initialState = {
   cart: { cartItems, shipping: {}, payment: {} },
   userSignin: { userInfo },
+  userUpdate: { userInfo },
 };
 const reducer = combineReducers({
   vinhoList: vinhoListReducer,
@@ -30,6 +35,7 @@ const reducer = combineReducers({
   vinhoDetails: vinhoDetailsReducer,
   userSignin: userSigninReducer,
   userRegister: userRegisterReducer,
+  userUpdate: userUpdateReducer,
   vinhoSave: vinhoSaveReducer,
   orderCreate: orderCreateReducer,
   orderDetails: orderDetailsReducer,

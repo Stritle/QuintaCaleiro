@@ -874,9 +874,10 @@ section {
 }
 
 .login li input {
-  height: 40px;
+  border: 2px solid gainsboro;
+  border-radius: 2px;
+  height: 25px;
   width: 400px;
-  border: 1px solid #531919;
 }
 
 .login li button {
@@ -944,9 +945,10 @@ section {
 }
 
 .register li input {
-  height: 40px;
+  border: 2px solid gainsboro;
+  border-radius: 2px;
+  height: 25px;
   width: 400px;
-  border: 1px solid #531919;
 }
 
 .register li button {
@@ -964,6 +966,7 @@ section {
   transition: 0.7s;
   -webkit-box-shadow: 3px 3px 10px #531919;
           box-shadow: 3px 3px 10px #531919;
+  cursor: pointer;
 }
 
 .register li button:hover {
@@ -1733,9 +1736,14 @@ section {
   margin-top: 10px;
 }
 
+.shipping div label {
+  font-family: Playball;
+}
+
 .shipping div input {
   border: 2px solid gainsboro;
-  border-radius: 5px;
+  border-radius: 2px;
+  height: 25px;
 }
 
 .shipping button {
@@ -2055,9 +2063,64 @@ h6 {
 .profile {
   margin-top: 25vh;
   margin-inline: 20vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .profile h1 {
+  font-size: 2.2rem;
+  color: #7e1a1a;
+}
+
+.profile form {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.profile form li {
+  list-style: none;
+}
+
+.profile form li label {
+  font-family: Playball;
+}
+
+.profile form li input {
+  border: 2px solid gainsboro;
+  border-radius: 2px;
+  height: 25px;
+  width: 400px;
+}
+
+.profile form li button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #531918;
+  color: aliceblue;
+  border-radius: 10px;
+  border: 0;
+  text-transform: uppercase;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+  cursor: pointer;
+}
+
+.profile form li button:hover {
+  background-color: aliceblue;
   color: #531918;
+  border: 2px solid #531918;
+  font-weight: 600;
 }
 /*# sourceMappingURL=App.css.map */

@@ -71,7 +71,7 @@ const Register = (props) => {
             ></input>
           </li>
           <li>
-            <label htmlFor="rePassword">Re-Password:</label>
+            <label htmlFor="rePassword">Confirmar Password:</label>
             <br />
             <input
               type="password"
