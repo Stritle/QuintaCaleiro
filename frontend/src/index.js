@@ -13,11 +13,17 @@ ReactDOM.render(
   <Provider store={store}>
     <React.StrictMode>
       <HelmetProvider>
-        <PayPalScriptProvider deferLoading={true}>
-          <Router>
+        <Router>
+          <PayPalScriptProvider
+            ooptions={{
+              "client-id": "test",
+              components: "buttons",
+              currency: "EUR",
+            }}
+          >
             <App />
-          </Router>
-        </PayPalScriptProvider>
+          </PayPalScriptProvider>
+        </Router>
       </HelmetProvider>
     </React.StrictMode>
   </Provider>,

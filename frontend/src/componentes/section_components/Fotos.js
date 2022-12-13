@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import vinhoFotos from "../../images/vinhoFotos.jpg";
-import vinhaFotos from "../../images/vinhaFotos.jpg";
-import eventosFotos from "../../images/eventosFotos.jpg";
-import visitasFotos from "../../images/visitasFotos.png";
+import vinhoFotos from "../../images/vinhoFotos.webp";
+import vinhaFotos from "../../images/vinhaFotos.webp";
+import eventosFotos from "../../images/eventosFotos.webp";
+import visitasFotos from "../../images/visitasFotos.webp";
 import { Link } from "react-router-dom";
 
 export default class Fotos extends Component {

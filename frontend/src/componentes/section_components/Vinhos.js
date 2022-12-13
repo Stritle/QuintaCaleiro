@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import v1 from "../../images/v1.png";
-import v2 from "../../images/v2.png";
-import v3 from "../../images/v3.png";
-import v4 from "../../images/v4.png";
+import v1 from "../../images/v1.webp";
+import v2 from "../../images/v2.webp";
+import v3 from "../../images/v3.webp";
+import v4 from "../../images/v4.webp";
 
 import { Link } from "react-router-dom";
 

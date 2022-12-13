@@ -94,7 +94,7 @@ const payOrder = (order, paymentResult) => async (dispatch, getState) => {
       "/api/orders/" + order._id + "/pay",
       paymentResult,
       {
-        headers: { Authorization: "Bearer " + userInfo.token },
+        headers: { Authorization: userInfo.token },
       }
     );
     dispatch({ type: ORDER_PAY_SUCCESS, payload: data });
